@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <div id="particles-js">
+
+    <div class="container">
+
+      <button id="dark-toggle" class="dark-mode-toggle">🌙</button>
+      <div>
+
+        <!-- <div class="csIcon">
+          <i class="fa fa-duotone fa-code fa-1x"></i>
+
+        </div> -->
+
+
+        <h1 style="margin: 20px auto 3px; cursor: default;">
+          Yasas Sri
+        </h1>
+        <div class="accounts">
+          <a href="https://www.linkedin.com/in/yasas-sri-171b932b3/" target=”_blank” class="fa fa-linkedin"
+            onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'"></a>
+          <a href="https://github.com/Yasas-Sri" target=”_blank” class="fa fa-github"
+            onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'"></a>
+          <a href="mailto: ezioelijahhanaang@gmail.com" class="fa fa-envelope" onMouseOver="this.style.color='black'"
+            onMouseOut="this.style.color='white'"></a>
+        </div>
+        <!-- <div class="meBtn">
+          <a href="about.html" style="color:white;" onMouseOver="this.style.color='black'"
+            onMouseOut="this.style.color='white'">About me</a>
+        </div> -->
+      </div>
+
+    </div>
+
+  </div>
+
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Load Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
+
+  <script>
+
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
+  <script>
+    const toggleButton = document.getElementById("dark-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
+
+
+  <!-- <script type="module" src="/src/main.js"></script> -->
+</body>
+
+</html>
